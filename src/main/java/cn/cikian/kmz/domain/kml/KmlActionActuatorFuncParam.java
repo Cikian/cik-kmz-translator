@@ -167,4 +167,44 @@ public class KmlActionActuatorFuncParam {
 
     @XStreamAlias("wpml:recordPointCloudOperate")
     private String recordPointCloudOperate;
+
+    // megaphone & searchlight
+
+    @XStreamAlias("wpml:megaphoneOperateType")
+    private String megaphoneOperateType;
+
+    @XStreamAlias("wpml:megaphoneOperateVolume")
+    private String megaphoneOperateVolume;
+
+    @XStreamAlias("wpml:megaphoneOperateLoop")
+    private String megaphoneOperateLoop;
+
+    @XStreamAlias("wpml:megaphoneOperateFilePath")
+    private String megaphoneOperateFilePath;
+
+    @XStreamAlias("wpml:megaphoneFileName")
+    private String megaphoneFileName;
+
+    @XStreamAlias("wpml:megaphoneFileOriginalName")
+    private String megaphoneFileOriginalName;
+
+    @XStreamAlias("wpml:megaphoneFileMd5")
+    private String megaphoneFileMd5;
+
+    @XStreamAlias("wpml:megaphoneFileBitrate")
+    private String megaphoneFileBitrate;
+
+    @XStreamAlias("ttsparam")
+    private TtsParam ttsparam;
+
+    @XStreamAlias("wpml:searchlightOperateType")
+    private String searchlightOperateType;
+
+    @XStreamAlias("wpml:searchlightBrightness")
+    private String searchlightBrightness;
+
+    @XStreamAlias("wpml:searchlightLightingType")
+    private String searchlightLightingType;
+
+
 }

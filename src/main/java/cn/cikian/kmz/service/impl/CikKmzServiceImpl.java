@@ -55,7 +55,7 @@ public class CikKmzServiceImpl implements CikKmzService {
                     this.handleRouteUpdate(wpmlInfo, uavRouteReq, FileTypeConstants.WPML, kmlParams);
                 }
             }
-            RouteFileUtils.buildKmz("更新航线kmz文件", kmlInfo, wpmlInfo);
+            RouteFileUtils.buildKmz("更新航线kmz文件", kmlInfo, wpmlInfo, null);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -98,7 +98,7 @@ public class CikKmzServiceImpl implements CikKmzService {
             List<KmlPlacemark> placemarkList = new ArrayList<>();
             for (RoutePointReq routePointReq : uavRouteReq.getRoutePointList()) {
                 RoutePointInfo routePointInfo = BeanUtil.copyProperties(routePointReq, RoutePointInfo.class);
-                KmlPlacemark kmlPlacemark = RouteFileUtils.buildKmlPlacemark(routePointInfo, kmlParams, fileType);
+                KmlPlacemark kmlPlacemark = RouteFileUtils.buildKmlPlacemark(routePointInfo, kmlParams, fileType, null);
                 placemarkList.add(kmlPlacemark);
             }
             kmlInfo.getDocument().getFolder().setPlacemarkList(placemarkList);
@@ -140,9 +140,10 @@ public class CikKmzServiceImpl implements CikKmzService {
         params.setDroneType(params.getDroneType() == null ? 100 : params.getDroneType());
         params.setSubDroneType(params.getSubDroneType() == null ? 1 : params.getSubDroneType());
         params.setPayloadType(params.getPayloadType() == null ? 99 : params.getPayloadType());
-        params.setSubPayloadType(params.getSubPayloadType() == null ? 2 : params.getSubPayloadType());
+        params.setSubPayloadType(params.getSubPayloadType() == null ? 0 : params.getSubPayloadType());
         params.setPayloadPosition(params.getPayloadPosition() == null ? 0 : params.getPayloadPosition());
         params.setFinishAction(params.getFinishAction() == null ? "goHome" : params.getFinishAction());
+        params.setImageFormat(params.getImageFormat() == null ? "visable" : params.getImageFormat());
         params.setGimbalPitchMode(params.getGimbalPitchMode() == null ? "usePointSetting" : params.getGimbalPitchMode());
 
         WaypointHeadingReq headingReq = params.getWaypointHeadingReq();

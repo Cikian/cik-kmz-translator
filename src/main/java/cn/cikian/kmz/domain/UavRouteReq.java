@@ -21,6 +21,16 @@ public class UavRouteReq implements Serializable {
     private String templateType;
 
     /**
+     * 航线里程 m
+     */
+    private Double duration;
+
+    /**
+     * covre Img
+     */
+    private String coverImg;
+
+    /**
      * 工作区ID
      */
     private String workspaceId;

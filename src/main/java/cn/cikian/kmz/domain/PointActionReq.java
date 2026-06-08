@@ -44,6 +44,11 @@ public class PointActionReq implements Serializable {
      */
     private String imageFormat;
 
+    /**
+     * 拍摄照片文件后缀
+     */
+    private String fileSuffix;
+
 
     /**
      * 云台偏航角
@@ -69,5 +74,67 @@ public class PointActionReq implements Serializable {
      * 停止录像
      */
     private Boolean stopRecord;
+
+    /**
+     * 喊话内容
+     */
+    private String ttsText;
+
+    /**
+     * 喊话音色 male
+     */
+    private String ttsRole;
+
+    /**
+     * 语言 CN
+     */
+    private String ttsLanguage;
+
+    /**
+     * 音量
+     */
+    private Integer ttsVolume;
+
+    /**
+     * 语速
+     */
+    private Integer ttsSpeed;
+
+    /**
+     * 喊话开关 0-开始喊话 1-结束喊话
+     */
+    private Integer megaphoneOperateType;
+
+    /**
+     * 喊话音量大小 [0, 100]
+     */
+    private Integer megaphoneOperateVolume;
+
+    /**
+     * 是否单曲循环播放 0-关闭 1-开启
+     */
+    private Integer megaphoneOperateLoop;
+
+    /**
+     * 喊话音频文件url
+     */
+    private String megaphoneFileUrl;
+
+    /**
+     * 喊话显示名称
+     */
+    private String megaphoneFileOriginalName;
+
+    /**
+     * 	探照灯操作类型 0-关闭 1-照明 2-爆闪
+     */
+    private Integer searchlightOperateType;
+
+    /**
+     * 	亮度 [0, 100]
+     */
+    private Integer searchlightBrightness;
+
+
 
 }

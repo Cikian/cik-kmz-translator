@@ -23,7 +23,10 @@ public enum ActionActuatorFuncEnums {
     GIMBAL_EVENLY_ROTATE("gimbalEvenlyRotate", "航段间均匀转动云台pitch角"),
     ORIENTED_SHOOT("orientedShoot", "精准复拍动作"),
     PANO_SHOT("panoShot", "全景拍照动作"),
-    RECORD_POINT_CLOUD("recordPointCloud", "点云录制操作");
+    RECORD_POINT_CLOUD("recordPointCloud", "点云录制操作"),
+    MEGAPHONE("megaphone", "喊话"),
+    SEARCHLIGHT("searchlight", "探照灯"),
+    ;
 
     private String value;
     private String description;

@@ -6,13 +6,13 @@
 
     <groupId>cn.cikian</groupId>
     <artifactId>kmz</artifactId>
-    <version>1.0.1</version>
+    <version>1.2.1</version>
 
     <developers>
         <developer>
             <id>cikian</id>
             <name>Cikian Chen</name>
-            <email>cikian@cikian.com</email>
+            <email>cikian@cikian.cn</email>
             <url>https://www.cikian.cn</url>
             <roles>
                 <role>Developer</role>
@@ -34,6 +34,7 @@
         <hibernate-validator.version>6.0.10.Final</hibernate-validator.version>
         <jackson.version>2.15.2</jackson.version>
         <spring-boot.version>2.6.6</spring-boot.version>
+        <jna.version>5.13.0</jna.version>
     </properties>
 
     <dependencies>
@@ -43,8 +44,23 @@
             <version>${commons-lang3.version}</version>
         </dependency>
         <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>${jna.version}</version>
+        </dependency>
+        <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-core</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-http</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-crypto</artifactId>
             <version>${hutool.version}</version>
         </dependency>
 
